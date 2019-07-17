@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Statistika ispita</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <main>
+
+        <section class="statistics">
+            <header>
+                <h1>Statistika ispita</h1>
+                <h4>Ukupno studenata</h4>
+
+                <div class="stats passed-stats">
+                    Položili
+                    <div class="stats-box">
+                        <span class="count"></span>
+                    </div>
+                </div>
+
+                <div class="stats failed-stats">
+                    Nisu položili
+                    <div class="stats-box">
+                        <span class="count"></span>
+                        <span class="percentage"></span>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <section class="form">
+            <form class="exam-form"> 
+                <select class="exams" name="exams">
+                    <option value="none"></option>
+                    <option value="morfologija">Morfologija</option>
+                    <option value="sintaksa">Sintaksa</option>
+                    <option value="semantika">Semantika</option>
+                    <option value="fonetika">Fonetika</option>
+                    <option value="pragmatika">Pragmatika</option>
+                </select>
+                <input class="full-name" type="text" name="full-name" placeholder="Ime i prezime">
+
+                <input class="grade" type="number" name="grade" placeholder="Ocena">
+
+                <button class = 'add-exam' type="submit">Dodaj</button>
+            </form>
+
+            <div class="error-box"></div>
+        </section>
+
+        <section class="students">
+            <div class="passed">
+                <h4>Položili</h4>
+                <ul>
+                </ul>
+            </div>
+
+            <div class="failed">
+                <h4>Nisu položili</h4>
+                <ul>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+    <script type="module">
+        import { init } from './js/app.js'
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            console.log("DOM fully loaded and parsed");
+            console.log("Init app");
+
+            init();
+        });
+    </script>
+</body>
+
+</html>
